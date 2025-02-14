@@ -158,7 +158,7 @@ function App() {
                         className={`fluid-img ${fadeOut ? 'fade-out' : ''}`}
                         style={{
                             position: 'absolute',
-                            left: Math.min(randomImage.position.x, window.innerWidth - 100),
+                            left: Math.min(Math.abs(randomImage.position.x - 100), window.innerWidth - 100),
                             top: Math.min(Math.abs(randomImage.position.y - 500), window.innerHeight - 500),
                             width: '25%',
                             height: 'auto'
