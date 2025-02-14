@@ -1,18 +1,14 @@
-
 .my-text {
   font-family: 'Great Vibes', 'Arial', sans-serif;
-  
-  color:#800020; /* Light pink color */
+  color: #800020; /* Light pink color */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text */
   margin: 20px 0;
   opacity: 1;
   transition: opacity 1s ease-in-out;
   font-weight: bold;
-  font-size: 550%;
-  padding-top: 10%;
+  font-size: 450%;
   position: relative; 
   z-index: 1;
-  
 }
 
 .my-text.fade-out {
@@ -28,11 +24,19 @@
   opacity: 0;
 }
 
+.background-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
 .align-content-center {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-bottom: 30px; /* Adjust this value to match the top margin */
 }
 
 .col.text-center {

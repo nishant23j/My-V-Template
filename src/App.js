@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
+import bild_heart_1 from './pictures/heart.png';
+import bild_heart_2 from './pictures/heart.png';
 import bild_heart_3 from './pictures/heart.png';
 import pic1 from './pictures/1.png';
 import pic2 from './pictures/2.png';
@@ -18,7 +20,7 @@ function App() {
     const [randomImages, setRandomImages] = useState([]);
     const [textIndex, setTextIndex] = useState(0);
     const [fadeOut, setFadeOut] = useState(false);
-    const images = [bild_heart_3, pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10];
+    const images = [bild_heart_1,bild_heart_2,bild_heart_3, pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10];
     const [audioStarted, setAudioStarted] = useState(false);
     const girlfriendName = "Bubu";
     const audioRef = useRef();
@@ -156,8 +158,8 @@ function App() {
                         className={`fluid-img ${fadeOut ? 'fade-out' : ''}`}
                         style={{
                             position: 'absolute',
-                            left: Math.min(randomImage.position.x, window.innerWidth - 200),
-                            top: Math.min(randomImage.position.y, window.innerHeight - 200),
+                            left: Math.min(randomImage.position.x, window.innerWidth - 100),
+                            top: Math.min(Math.abs(randomImage.position.y - 500), window.innerHeight - 500),
                             width: '25%',
                             height: 'auto'
                         }}
